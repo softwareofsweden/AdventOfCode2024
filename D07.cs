@@ -119,7 +119,7 @@
             var equations = ParseEquations(lines);
 
             long total = 0;
-            
+
             foreach (var equation in equations)
                 if (equation.IsValid2())
                     total += equation.Answer;

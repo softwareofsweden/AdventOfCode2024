@@ -1,6 +1,4 @@
-﻿using System.Security.Cryptography;
-
-namespace aoc2024.Solutions
+﻿namespace aoc2024.Solutions
 {
     internal static class D09
     {
@@ -87,7 +85,7 @@ namespace aoc2024.Solutions
                 files.Push(new Tuple<int, int>(fileId, fileSize));
             }
 
-            while (files.TryPop(out Tuple<int,int>? file))
+            while (files.TryPop(out Tuple<int, int>? file))
             {
                 if (files.Count == 0) break;
 
@@ -120,7 +118,7 @@ namespace aoc2024.Solutions
                         if (disk[i] == fileId)
                             disk[i] = 0;
                     for (int i = 0; i < fileSize; i++)
-                        disk[destLocation+i] = fileId;
+                        disk[destLocation + i] = fileId;
                 }
             }
 
